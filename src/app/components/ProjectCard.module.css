@@ -18,7 +18,7 @@
 }
 
 .projectName {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--font-orbitron);
   font-size: 1.5rem;
   color: #0ff;
   margin-bottom: 1rem;
