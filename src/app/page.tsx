@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Background floating elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -85,32 +85,21 @@ export default function Home() {
             technologies
           </motion.p>
 
-          <motion.div
-            className="flex gap-4"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1 }}
-          >
-            <Link href="/projects">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="cursor-pointer rounded-lg bg-blue-600 px-8 py-3 font-semibold transition-colors hover:bg-blue-700"
-              >
-                View Projects
-              </motion.button>
+          <div className="flex gap-4">
+            <Link
+              href="/projects"
+              className="rounded-lg bg-blue-600 px-8 py-3 font-semibold transition-all hover:scale-105 hover:bg-blue-700 active:scale-95"
+            >
+              View Projects
             </Link>
 
-            <Link href="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="cursor-pointer rounded-lg border-2 border-blue-600 px-8 py-3 font-semibold transition-colors hover:bg-blue-600/10"
-              >
-                Contact Me
-              </motion.button>
+            <Link
+              href="/contact"
+              className="rounded-lg border-2 border-blue-600 px-8 py-3 font-semibold transition-all hover:scale-105 hover:bg-blue-600/10 active:scale-95"
+            >
+              Contact Me
             </Link>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </main>
