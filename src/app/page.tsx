@@ -1,12 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 
 export default function Home() {
   const [text, setText] = useState("");
   const fullText = "Frontend Developer | SaaS Engineer";
+
+  // Pre-calculate particle positions
+  const particles = useMemo(() => {
+    return [...Array(20)].map(() => ({
+      startX: Math.random() * 100, // Use percentages instead of fixed pixels
+      startY: Math.random() * 100,
+      endX: Math.random() * 100,
+      endY: Math.random() * 100,
+      duration: 15 + Math.random() * 10, // Slightly slower, more consistent duration
+    }));
+  }, []); // Empty dependency array means this only runs once
 
   // Typing effect
   useEffect(() => {
@@ -27,24 +38,23 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Background floating elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute h-2 w-2 rounded-full bg-blue-500 opacity-20"
+            initial={{
+              x: `${particle.startX}vw`,
+              y: `${particle.startY}vh`,
+            }}
             animate={{
-              x: [
-                Math.random() * 1920, // Using a default viewport width
-                Math.random() * 1920,
-              ],
-              y: [
-                Math.random() * 1080, // Using a default viewport height
-                Math.random() * 1080,
-              ],
+              x: `${particle.endX}vw`,
+              y: `${particle.endY}vh`,
             }}
             transition={{
-              duration: 10 + Math.random() * 10,
+              duration: particle.duration,
               repeat: Infinity,
               repeatType: "reverse",
+              ease: "linear",
             }}
           />
         ))}
