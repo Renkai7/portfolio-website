@@ -63,7 +63,7 @@ export default function Home() {
             whileHover={{ scale: 1.02 }}
             style={{ perspective: 1000 }}
           >
-            John Doe
+            Michael Spencer
           </motion.h1>
 
           <motion.div
