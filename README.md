@@ -1,8 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, cyberpunk-themed portfolio website built with Next.js 14, featuring interactive particle effects, glitch animations, and a responsive design.
 
-First, run the development server:
+## 🌟 Features
+
+- Cyberpunk-inspired design with dynamic visual effects
+- Interactive particle background system
+- Glitch text animations
+- Responsive layout for all devices
+- Dark mode optimized
+- Performance-focused implementation
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Custom animations and effects
+- **Typography:** Geist Font
+- **Deployment:** Vercel
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone [your-repo-url]
+cd portfolio-website
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +46,45 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio-website/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── BackgroundParticles.tsx
+│   │   │   ├── GlitchText.tsx
+│   │   │   ├── ScanLines.tsx
+│   │   │   └── TechStack.tsx
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+├── public/
+└── tailwind.config.ts
+```
 
-## Learn More
+## 🔧 Configuration
 
-To learn more about Next.js, take a look at the following resources:
+The project uses Tailwind CSS for styling. You can modify the theme in `tailwind.config.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Learn More
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To learn more about the technologies used in this project:
 
-## Deploy on Vercel
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Vercel](https://vercel.com) - Deploy your Next.js apps with zero configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🚀 Deployment
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
