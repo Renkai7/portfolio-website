@@ -12,6 +12,10 @@ import {
   SiPrisma,
 } from "react-icons/si";
 
+/**
+ * A mapping of technology names to their corresponding icon components
+ * from react-icons library. Used to display technology icons for each project.
+ */
 const techIcons: { [key: string]: IconType } = {
   React: SiReact,
   "Next.js": SiNextdotjs,
@@ -21,6 +25,17 @@ const techIcons: { [key: string]: IconType } = {
   Prisma: SiPrisma,
 };
 
+/**
+ * Props interface for the ProjectCard component
+ * @interface ProjectCardProps
+ * @property {string} title - The title of the project
+ * @property {string} description - A brief description of the project
+ * @property {string} image - The path to the project's preview image
+ * @property {string[]} tech - An array of technology names used in the project
+ * @property {string} [liveUrl] - Optional URL to the live demo of the project
+ * @property {string} [githubUrl] - Optional URL to the project's GitHub repository
+ * @property {number} index - The order index of the card (used for animation timing)
+ */
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -31,6 +46,23 @@ interface ProjectCardProps {
   index: number;
 }
 
+/**
+ * ProjectCard Component
+ *
+ * A responsive card component that displays project information with animations and hover effects.
+ * Features include:
+ * - Animated entry using Framer Motion
+ * - Project image with overlay gradient
+ * - Technology stack icons
+ * - Links to live demo and GitHub repository
+ * - Hover effects for interactive elements
+ *
+ * The card uses Tailwind CSS for styling and includes:
+ * - Purple accent colors
+ * - Smooth transitions and animations
+ * - Responsive design
+ * - Glass-like background effect
+ */
 export default function ProjectCard({
   title,
   description,
