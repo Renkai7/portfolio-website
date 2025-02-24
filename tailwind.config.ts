@@ -64,23 +64,56 @@ export default {
         },
         glitch: {
           "0%, 100%": { transform: "translate(0)" },
-          "33%": { transform: "translate(-1px, 1px)" },
-          "66%": { transform: "translate(1px, -1px)" },
+          "20%": { transform: "translate(-1px, 1px)" },
+          "40%": { transform: "translate(-1px, -1px)" },
+          "60%": { transform: "translate(1px, 1px)" },
+          "80%": { transform: "translate(1px, -1px)" },
         },
         glow: {
-          "0%, 100%": { opacity: "0.8" },
-          "50%": { opacity: "0.3" },
+          "0%, 100%": { opacity: "0.3" },
+          "50%": { opacity: "0.5" },
         },
         "scroll-left": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        flicker: {
+          "0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%": {
+            opacity: "0.99",
+            filter: "brightness(1)",
+          },
+          "20%, 21.999%, 63%, 63.999%, 65%, 69.999%": {
+            opacity: "0.4",
+            filter: "brightness(0.8)",
+          },
+        },
+        neonPulse: {
+          "0%, 100%": {
+            textShadow:
+              "0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff",
+          },
+          "50%": {
+            textShadow:
+              "0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #0ff, 0 0 73px #0ff, 0 0 80px #0ff, 0 0 94px #0ff, 0 0 140px #0ff",
+          },
+        },
       },
       animation: {
         "scan-lines": "scan-lines 8s linear infinite",
-        glitch: "glitch 3s infinite linear",
-        glow: "glow 3s ease-in-out infinite",
+        glitch: "glitch 4s ease-in-out infinite",
+        glow: "glow 4s ease-in-out infinite",
         "scroll-left": "scroll-left 20s linear infinite",
+        flicker: "flicker 3s linear infinite",
+        neonPulse: "neonPulse 2.5s ease-in-out infinite",
+      },
+      fontFamily: {
+        orbitron: ["var(--font-orbitron)"],
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+      },
+      backgroundImage: {
+        "grid-white":
+          "linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px)",
       },
     },
   },
